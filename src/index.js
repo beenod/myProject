@@ -1,15 +1,3 @@
-import express from 'express';
+import connectDB from "./db/index.js"
 
-const app = express()
-
-const port = 3000
-
-app.get('/',(req,res)=>{
-
-    res.json({hello:'world'})
-})
-
-
-app.listen(port,()=>{
-    console.log(`listening on ${port}`)
-})
+connectDB()
